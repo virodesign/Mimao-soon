@@ -14,20 +14,15 @@
 
     <div class="container">
         <div class="video-container">
-            <video autoplay muted loop id="myVideo" width="720" height="1280">
+            <video autoplay muted loop id="myVideo">
                 <source src="/media/Mimao-promo720.webm" type="video/webm">
                 Your browser does not support the video tag unfortunately, try a different browser.
-            </video> 
+            </video>
             <div class="video-overlay">
                 <p>Mimao is the new sweet rice drink!</p>
                 <p>The beverage is a re-defined twist on the beloved Venezuelan Chicha, expertly crafted to appeal to the British palate.</p>
                 <p>The drinks are creamy, sweet and delicious with a twist of cinnammon and with a variety of flavours and toppings.</p>
             </div>
-            <!-- <div class="hero-text">
-                <p>Mimao is a New Sweet Rice Drink. The beverage is a re-defined twist on the beloved Venezuelan Chicha, expertly crafted to appeal to the British palate.</p>
-                <p>The drinks are creamy, sweet and delicious with a twist of cinnammon and with a variety of flavours and toppings. 
-                Available only in Manchester through Deliveroo</p>
-            </div> -->
         </div>
 
         <div class="col-content">
@@ -55,11 +50,41 @@
         </div>
     </div>
 
-    <footer>all rights reserved</footer>
+    <footer><p class="small-txt">Mimao Drinks &copy; 2025</p></footer>
+
+<!-- <script>
+
+let myPlayer;
+let backfill;
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+myPlayer = document.getElementById("myVideo");
+backfill = document.getElementById("backfill-image");
+
+ myPlayer.onerror = function() {
+   console.error(myPlayer.error);
+   showPlaceholderImage();
+};
+ 
+// Example invalid source to throw an error
+myPlayer.src = "https://example.com/bogusvideo.mp4";
+ // Example valid source that doesn't throw an error 
+ // myPlayer.src = "https://www.w3schools.com/tags/movie.mp4";
+  
+  
+ function showPlaceholderImage() {
+   myPlayer.style.display = "none";
+    backfill.style.display = "block";
+ }
+
+  
+  
+});
 
 
 
-
+</script> -->
     
 </body>
 </html>
