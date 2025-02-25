@@ -15,12 +15,12 @@
     <div class="container">
         <div class="video-container">
             <img class="bg-imgfallback" src="/assets/pink-girl-mimao.jpg" alt="Girl all drink dressed enjoying a Mimao drink"/>
-            <video autoplay muted loop id="bg-video">
+            <video autoplay muted loop playsinline id="bgVideo">
                 <source src="/assets/mimao-promo720.mp4" type="video/mp4">
                 <source src="/assets/mimao-promo720.webm" type="video/webm">
                 Your browser does not support the video tag unfortunately, try a different browser.
             </video>
-            <div class="video-overlay">
+            <div class="hero-overlay">
                 <p>Mimao is the new sweet rice drink!</p>
                 <p>The beverage is a re-defined twist on the beloved Venezuelan Chicha, expertly crafted to appeal to the British palate.</p>
                 <p>The drinks are creamy, sweet and delicious with a twist of cinnammon and with a variety of flavours and toppings.</p>
@@ -38,7 +38,7 @@
                     <button class="btn-base bt-ins" >Instagram</button>
                 </a>
 
-                <a href="https://www.tiktok.com/@mimao.co.uk" target="_blank">
+                <a href="https://www.tiktok.com/@mimao.drinks" target="_blank">
                     <button class="btn-base bt-tik">TikTok</button>
                 </a>
 
@@ -55,4 +55,26 @@
     <footer><p class="small-txt">Mimao Drinks &copy; 2025</p></footer>
     
 </body>
+
+<!-- Remove video if error -->
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.getElementById('bgVideo');
+  
+  video.addEventListener('error', function() {
+    video.style.display = 'none';
+  });
+  
+  // Optionally, if the video doesn't play after a timeout, hide it:
+  setTimeout(function() {
+    if (video.paused || video.readyState < 3) {
+      video.style.display = 'none';
+    }
+  }, 3000);
+});
+
+
+</script>
+
 </html>
