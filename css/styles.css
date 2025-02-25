@@ -279,6 +279,16 @@ footer p{
        margin-bottom: -2px;
     }
 
+    .bg-img-fallback{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover; /* Ensures the image covers the container without distortion */
+        z-index: 1;
+    }
+
 
 }
 
