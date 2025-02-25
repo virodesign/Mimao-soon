@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Optionally, if the video doesn't play after a timeout, hide it:
   setTimeout(function() {
-    if (video.paused || video.readyState < 5) {
+    if (video.stop || video.readyState < 10) {
       video.style.display = 'none';
     }
-  }, 5000);
+  }, 10000);
 });
 
 
