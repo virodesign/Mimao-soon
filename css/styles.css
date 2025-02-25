@@ -18,6 +18,10 @@ body{
     font-size: 16px;
 }
 
+html, body{
+    height: 100%;
+}
+
 img{
     max-width: 100%;
 }
@@ -67,41 +71,16 @@ p{
 
 .container{
     display: flex;
-    height: 90vh;
+    height: 90%;
   }
-
-  /* SECTION HERO */
-
-/* SECTION CONTENT*/
 
 
 header{
-    background-image: url("/media/ribbon.png");
-    background-size: cover;
-    height: 44px;
+    background-image: url("/assets/ribbon.jpg");
+    background-size: contain;
+    height: 42px;
 }
 
-/* .col-hero{
-    background-image: url("/media/pink-girl.jpg");
-    background-color: #676767;
-    background-blend-mode: soft-light;
-    background-size: cover; 
-    background-position: right top;
-    background-repeat: no-repeat;
-    width: 40%;
-    display: flex;
-    align-items: center;
-
-  } */
-
-.video-container{
-    position: relative;
-    width: 40%;
-    height: 100%;
-    overflow: hidden;
-    /* width: 40vw;
-    height: 80%; */
-}
 
 .btn-wrapper{
     display: flex;
@@ -119,17 +98,49 @@ header{
     height: 100%;
 }
 
-.logo{
-    width: 390px;
-    margin: 2rem;
+
+footer{
+    background-color: #0a0a0a;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+footer p{
+    font-size: .8rem;
 }
 
+.logo{
+    width: 390px;
+}
 
-#myVideo{
+.video-container{
+    position: relative;
+    width: 40%;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+#bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover; /* This ensures the video covers the container without distortion */
     display: block;
+    z-index: 2;
+}
+
+.bg-img-fallback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    z-index: 1;
 }
 
 .video-overlay {
@@ -143,6 +154,7 @@ header{
     flex-direction: column;
     justify-content: center;
     padding: 6em;
+    z-index: 3;
 
   }
 
@@ -150,7 +162,7 @@ header{
    font-size: 1.4rem;
    text-align: left;
    text-shadow: 2px 4px 4px #0000005e;
-   margin-bottom: -3px;
+   margin-bottom: -3px; /*this act like a paragraph spacing */
 }
 
 .backfill-image{
@@ -158,33 +170,23 @@ header{
     width: 100%;
 }
 
-
-  footer{
-    background-color: #0a0a0a;
-    padding: 2rem;
-  }
-
-
-  /* _______COMPONENTS__________ */
-
 /* BUTTONS */
 
 .btn-base{
     /* display: inline-block; */
     font-family: inherit;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    padding: .4em 1.4em;
+    padding: .4em 1.2em;
     border:none;
     border-radius: 2em;
     width:80%;
     width: 260px;
     margin-bottom: 1em;
     color: white;
-    border: 4px solid black;
+    border: 3px solid black;
     font-weight: 900;
-    letter-spacing: .11rem;
-    /* box-shadow:0 6px 10px rgba(0,0,0,.2); */
+    letter-spacing: .1rem;
 }
 
 .btn-wrap{
@@ -208,11 +210,6 @@ header{
     background-color: #115cb2;
 }
 
-/* 
-::-webkit-input-placeholder{
-    color:#c7c7c7;
-} */
-
 .btn-base:hover,
 .btn-base:focus{
     background: #c54e4e;
@@ -226,10 +223,21 @@ header{
 
 @media(max-width:950px){
 
+    header{
+        height: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .logo{
+        width: 300px;
+        margin-bottom: 2rem;
+    }
+
     .container{
         display: flex;
         flex-direction: column-reverse;
-        height: 50%;
         width: 100%;
       }
 
@@ -239,18 +247,11 @@ header{
         align-items: center;
       }
 
-      .col-hero{
-        width: 100%;
-        height: 500px;
-      }
-
       .video-container{
         position: relative;
         width: 100%;
-        height: 600px;
+        height:100%;
         overflow: hidden;
-        /* width: 40vw;
-        height: 80%; */
     }
 
       .video-overlay {
@@ -263,7 +264,7 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 6em;
+        padding: 5em;
     
       }
     
@@ -273,8 +274,6 @@ header{
        text-shadow: 1px 2px 2px #0000005e;
        margin-bottom: -2px;
     }
-
-
 
 
 }
