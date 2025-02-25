@@ -29,7 +29,6 @@ img{
 /* TEXT STYLES */
 
 
-
 .varela-round-regular {
     font-family: "Varela Round", serif;
     font-weight: 400;
@@ -67,14 +66,14 @@ p{
     margin: 0;
     letter-spacing: -0.1rem;
     font-weight: 300;
- } 
+} 
 
 /* ______________________ */
 
 .container{
     display: flex;
     height: 90%;
-  }
+}
 
 
 header{
@@ -135,7 +134,7 @@ footer p{
     z-index: 2;
 }
 
-.bg-img-fallback{
+.bg-fallback{
     position: absolute;
     top: 0;
     left: 0;
@@ -174,26 +173,30 @@ footer p{
 
 /* BUTTONS */
 
+a{
+    text-decoration: none;
+}
+
 .btn-base{
-    /* display: inline-block; */
+    display: block;
     font-family: inherit;
+    font-weight: 900;
+    letter-spacing: .1rem;
     font-size: 1.2rem;
     cursor: pointer;
-    padding: .4em 1.2em;
+    padding: .5rem 2rem;
     border:none;
     border-radius: 2em;
-    width:80%;
-    width: 260px;
     margin-bottom: 1em;
     color: white;
     border: 3px solid black;
-    font-weight: 900;
-    letter-spacing: .1rem;
+    width: 100%;
 }
 
-.btn-wrap{
+.btn-wrapper{
     display: flex;
     flex-direction: column;
+    align-items: stretch;
 }
 
 .bt-del{
@@ -211,6 +214,12 @@ footer p{
 .bt-fb{
     background-color: #115cb2;
 }
+
+.bt-ws{
+    background-color: #25d366;
+    color: black;
+}
+
 
 .btn-base:hover,
 .btn-base:focus{
