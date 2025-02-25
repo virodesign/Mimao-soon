@@ -177,6 +177,11 @@ a{
     text-decoration: none;
 }
 
+.alink{
+    color: white;
+    text-decoration: underline;
+}
+
 .btn-base{
     display: block;
     font-family: inherit;
