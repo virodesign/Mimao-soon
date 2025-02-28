@@ -235,6 +235,40 @@ a{
 }
 
 
+/* .gd-background{ 
+   
+    background: linear-gradient(90deg, #ef8885, #f6c8c5,#fef9c7);
+    animation: rainbow 10s ease infinite;
+    -webkit-animation: rainbow 10s ease infinite;
+    -z-animation: rainbow 10s ease infinite;
+    -o-animation: rainbow 10s ease infinite;
+    background-size: 1800% 1800%;
+    overflow: hidden;
+}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+
+ */
+
 /* --------MEDIA QUERY------------ */
 
 @media(max-width:950px){
